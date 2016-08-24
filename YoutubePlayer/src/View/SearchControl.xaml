@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="YoutubeDownloader.View.SearchControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Name="Root"
+             Height="30"
+             Background="Transparent"
+             d:DesignHeight="30"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Templates.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </UserControl.Resources>
+
+  <DockPanel MinWidth="100" Background="Transparent">
+    <Button Click="ButtonClickHandler"
+            DockPanel.Dock="Right"
+            Style="{StaticResource LiteButton}">
+      <Button.Content>
+        <Image Source="pack://application:,,,/media/search.png" />
+      </Button.Content>
+    </Button>
+    <TextBox Name="Input"
+             Background="Transparent"
+             Foreground="Black"
+             KeyDown="KeyDownHandler"
+             MouseUp="MouseUpHandler" />
+  </DockPanel>
+</UserControl>
